@@ -1,0 +1,172 @@
+@use './colors' as c;
+
+*,
+*::after,
+*::before {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	font-size: 62.5%;
+	scroll-behavior: smooth;
+}
+
+body {
+	font-size: 1.6rem;
+	font-family: 'Raleway', sans-serif;
+}
+
+button,
+input,
+select,
+textarea,
+option {
+	font-family: 'Raleway', sans-serif;
+}
+
+.contact select,
+input,
+textarea {
+	font-size: 1.6rem;
+}
+
+.hero-shadow {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background-color: c.$img-shadow;
+	z-index: -1;
+}
+
+// Header
+
+.header {
+	position: relative;
+	height: 300px;
+}
+
+.header h1 {
+	font-size: 5rem;
+	font-weight: 200;
+}
+
+// Nav
+
+.navbar-toggler {
+	font-size: 2rem;
+}
+
+.fa-eye-low-vision {
+	font-size: 2rem;
+	transition: color 0.3s;
+}
+
+.fa-eye-low-vision:hover {
+	color: c.$main-color;
+}
+
+.nav-link {
+	transition: color 0.3s;
+}
+
+.nav-link:hover {
+	color: c.$main-color;
+}
+
+.aboutus .btn {
+	padding: 0.5em 2em;
+	font-size: 1.8rem;
+}
+
+// Karuzela
+
+.carousel img {
+	height: 300px;
+}
+
+.carousel-control-next-icon,
+.carousel-control-prev-icon {
+	width: 5rem;
+	height: 5rem;
+}
+
+// Cennik
+
+.price {
+	background-color: c.$light-white;
+}
+
+.card-body hr {
+	width: 50%;
+	margin: 0 auto;
+}
+
+.card-body i {
+	font-size: 3rem;
+}
+
+.card h5 {
+	font-weight: bold;
+	font-size: 2.8rem;
+}
+
+.card .btn {
+	padding: 0.5em 2em;
+	font-size: 1.2rem;
+}
+
+.card .btn:hover,
+.contact .btn:hover,
+.aboutus .btn:hover {
+	background-color: #123387;
+}
+
+.card {
+	cursor: default;
+}
+
+// Kontakt
+
+.contact__title {
+	text-align: center;
+}
+
+.contact-address {
+	font-size: 3rem;
+	font-weight: bold;
+}
+
+.contact textarea {
+	max-height: 100%;
+}
+
+.contact .btn-box {
+	display: flex;
+	justify-content: center;
+}
+
+.contact button {
+	font-size: 2.2rem;
+	padding: 0.5em 2em;
+}
+
+//  Media Q
+
+@media (min-width: 992px) {
+	.price__heading,
+	.contact__title {
+		text-align: left;
+	}
+
+	.main-card {
+		transform: scale(1.2);
+	}
+
+	.card {
+		box-shadow: 5px 5px 10px;
+	}
+}
